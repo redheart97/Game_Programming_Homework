@@ -4,6 +4,9 @@
 
 #ifdef _WINDOWS
 #include <GL/glew.h>
+#define RESOURCE_FOLDER ""
+#else
+#define RESOURCE_FOLDER "NYUCodebase.app/Contents/Resources/"
 #endif
 
 #include <SDL.h>
@@ -15,11 +18,6 @@
 #include "stb_image.h"
 #include "ShaderProgram.h"
 
-#ifdef _WINDOWS
-#define RESOURCE_FOLDER ""
-#else
-#define RESOURCE_FOLDER "NYUCodebase.app/Contents/Resources/"
-#endif
 
 
 GLuint LoadTexture(const char *filePath) {
